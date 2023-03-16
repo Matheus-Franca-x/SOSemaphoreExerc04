@@ -25,19 +25,20 @@ public class BankControll
 				int op = (int) (Math.random() * 2) + 1;
 				try {
 					
-					switch(op)
+					
+					if(op == 1)
 					{
-						case 1:
-							pausaDeposit.acquire();
-							Thread.sleep((int) (Math.random() * 201) + 200);
-							deposit();
-							break;
-						case 2:
-							pausaSaque.acquire();
-							Thread.sleep((int) (Math.random() * 201) + 200);
-							saque();
-							break;
+						pausaDeposit.acquire();
+						Thread.sleep((int) (Math.random() * 201) + 200);
+						deposit();
 					}
+					else
+					{
+						pausaSaque.acquire();
+						Thread.sleep((int) (Math.random() * 201) + 200);
+						saque();
+					}
+					
 					
 					
 				} catch (InterruptedException e) {
