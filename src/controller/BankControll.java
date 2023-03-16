@@ -9,6 +9,7 @@ public class BankControll
 	Semaphore pausaDeposit;
 	Semaphore pausaSaque;
 	
+	
 	public BankControll(int pessoa, Semaphore pausa)
 	{
 		this.pessoaId = pessoa;
@@ -57,6 +58,8 @@ public class BankControll
 			}
 		}.start();
 	}
+	
+	
 	
 	public void deposit()
 	{
